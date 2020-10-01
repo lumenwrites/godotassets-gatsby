@@ -1,0 +1,49 @@
+header {
+  background: $header-bg;
+  padding: 8px 24px;
+  height: 48px;
+
+  .logo {
+    text-transform: uppercase;
+    line-height: 32px;
+    font-weight: lighter;
+    float: left;
+
+    .godot {
+      font-family: "Lilita One";
+    }
+
+    font-family: "Open Sans";
+    font-size: 22px;
+    color: $text;
+    float: left;
+    font-weight: 100;
+    .logo-image {
+      width: 32px;
+      width: 40px;
+      height: 40px;
+      margin-top: -5px;
+      float: left;
+      margin-right: 4px;
+
+      //border-radius: 50%;
+      //background: #282c32;
+    }
+    .bolder {
+      font-weight: 500;
+    }
+  }
+
+  .btn {
+    margin-left: 4px;
+  }
+
+  .dropdown .menu {
+    left: 4px;
+    top: calc(100% + 5px); // not sure why 5
+  }
+  @media print {
+    display: none;
+  }
+}
+

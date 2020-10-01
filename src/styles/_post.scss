@@ -1,0 +1,114 @@
+article {
+    padding: 20px 40px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    margin-top: 20px;
+    background: $post-bg;
+    //background: #fffaf1;
+    border-radius: 4px;
+    img {
+        width: 100%;
+    }
+    .header-img {
+        width: calc(100% + 80px);
+        margin: -40px;
+        margin: -20px -40px;
+        margin-bottom: 0;
+    }
+
+    h1,
+    h2 {
+        text-align: center;
+    }
+}
+.asset {
+    padding: 0 40px;
+    .author {
+        color: $text-blue;
+        //text-transform: uppercase;
+        float: right;
+        cursor: pointer;
+        &:hover {
+            color: white;
+        }
+    }
+    .tags {
+        margin-top: 20px;
+        padding: 2px 40px 4px 40px;
+        width: calc(100% + 80px);
+        margin-left: -40px;        
+    }
+}
+.post-grid {
+    display: grid;
+    grid-gap: 0 10px;
+    grid-template-columns: repeat(3, 1fr);
+    min-height: 150px;
+    @media (max-width: 640px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.wip-note {
+    color: #464c61;
+    outline: 1px solid #464c61;
+    font-size: 1.2em;
+    margin: auto;
+    margin-top: 20px;
+    width: 400px;
+    padding: 20px;
+}
+.post-box {
+    background: $post-bg;
+    margin-top: 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.09);
+
+    a { color: white; }
+    .title {
+        font-size: 1.2em;
+        margin-top: 10px;
+        font-weight: bold;
+        color: white;
+        display: inline-block;
+    }
+    .description {
+        padding: 0px 10px 10px 10px;
+        font-size: 12px;
+        color: white;
+    }
+    .author {
+        color: $text-blue;
+        text-transform: uppercase;
+        cursor: pointer;
+        &:hover {
+            color: white;
+        }
+    }
+    .tags {
+        overflow: hidden;
+        height: 26px;
+        .tag {
+            margin-top: 3px;
+            display: block;
+            float: left;
+        }
+    }
+    p {
+        margin: 0;
+    }
+}
+.tags {
+    white-space: nowrap;
+    overflow: hidden;
+    border-top: 1px solid #333b4fcf;
+    border-top: 1px solid #384260;
+    padding: 2px 10px 4px 10px;
+    .tag {
+        font-size: 0.7em;
+        background: #333b4f;
+        border-radius: 2px;
+        padding: 1px 4px;
+        margin-right: 2px;
+        display: inline-block;
+        color: $text-blue;
+    }
+}

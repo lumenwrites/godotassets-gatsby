@@ -1,0 +1,22 @@
+$text: white; 
+$text-dim: #464c61; //;
+$text-blue: #667399; //#445074;
+$text-link:#478dc0; 
+$border: #dddddd;
+$header-bg: #333B4F; 
+$footer-bg:#1a202a;
+$scrollbar-thumb: rgba(110, 110, 110, 0.2);
+$background-main:#202631;
+
+$btn-bg:#262d3b;
+$panel-bg: #343c4e;
+$post-bg:#262d3b;
+
+@import "./_fonts.scss";
+@import "./_reset.scss";
+@import "./_global.scss";
+@import "./_helpers.scss";
+@import "./_elements.scss";
+@import "./_header.scss";
+@import "./_post.scss";
+
