@@ -17,6 +17,7 @@ const renderTags = (tags) => {
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.mdx
+  console.log('File', post.frontmatter)
   return (
     <Layout location={location}>
       <article className={"asset"} >
@@ -28,7 +29,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             <h1 className="title">{post.frontmatter.title}</h1>
             <div className="short-description">{post.frontmatter.description}</div>
             <br />
-            <div className="btn btn-cta large full-width">Download</div>
+            <a className="btn btn-cta large full-width" href={`${post.frontmatter.assetFile}`}>
+              Download
+            </a>
           </div>
         </div>
         <MDXRenderer>{post.body}</MDXRenderer>
@@ -49,8 +52,8 @@ export default BlogPostTemplate
 
 export const pageQuery = graphql`
   query AssetBySlug($slug: String!) {
-          mdx(fields: {slug: {eq: $slug } }) {
-          id
+      mdx(fields: {slug: {eq: $slug } }) {
+      id
       excerpt(pruneLength: 160)
       body
       fields {
@@ -59,6 +62,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
+        assetFile
         image {
           childImageSharp {
             original { src }

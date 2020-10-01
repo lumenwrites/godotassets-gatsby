@@ -1,22 +1,24 @@
-html, body {
+html,
+body {
     // font-family: ;
     color: $text;
     background: $background-main;
     font-family: "Open Sans";
     //font-family: "RobotoSlab";
-    margin:0;
+    margin: 0;
     height: 100%;
     font-size: 16px;
 }
 
-input, textarea {
+input,
+textarea {
     color: $text;
     //font-family: "RobotoSlab";
 }
-#root, .app {
+#root,
+.app {
     height: 100%;
 }
-
 
 ::-webkit-scrollbar {
     width: 10px;
@@ -25,7 +27,7 @@ input, textarea {
 
 ::-webkit-scrollbar-track,
 ::-webkit-scrollbar-corner {
-    background-color:transparent;
+    background-color: transparent;
 }
 
 ::-webkit-scrollbar-corner {
@@ -33,21 +35,24 @@ input, textarea {
 }
 ::-webkit-scrollbar-thumb {
     background-color: $scrollbar-thumb;
-    border: 2px solid transparent!important;
+    border: 2px solid transparent !important;
     border-radius: 9px;
     background-clip: content-box;
 }
-
 
 /* Padding doesn't add to width */
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 /* Typography */
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     margin-top: 1em;
     //color: #58170e;
 }
@@ -66,36 +71,41 @@ h3 {
     //margin-bottom: -15px;
     border-bottom: 2px solid $border; //#cab06c;
     & + p {
-	margin-top:0;
+        margin-top: 0;
     }
     & + img {
-	margin-top:10px;
+        margin-top: 10px;
     }
 }
 h4 {
-    font-size: 1.2em;    
+    font-size: 1.2em;
 }
 h5 {
-    font-size: 1em;    
+    font-size: 1em;
 }
 p {
-    margin-top:1em;
+    margin-top: 1em;
 }
 a {
     cursor: pointer;
     color: $text-link;
-    &:hover, &:active, &:focus {
-	color: $text-link;
+    &:hover,
+    &:active,
+    &:focus {
+        color: $text-link;
     }
     svg path {
-	fill: $text-link;
+        fill: $text-link;
     }
 }
-article a, .prompts a {
+p a {
     font-weight: bold;
     text-decoration: underline;
 }
-b, strong { font-weight: bold;}
+b,
+strong {
+    font-weight: bold;
+}
 ol {
     //margin-top: 1em;
 }
@@ -104,16 +114,18 @@ ol li {
     //margin-left: 1em;
 }
 hr {
-    border:none;
+    border: none;
     margin: 4px 0 4px 0;
     //border-top: 1px solid $border;
     //border-top: 2px solid #cab06c;
     border-top: 1px solid $text-dim; //#cab06c;
 }
 /* Elements */
-textarea { resize:none; }
+textarea {
+    resize: none;
+}
 ul {
-    padding:0;
+    padding: 0;
     margin-top: 1em;
     //padding-left: 10px;
 }
@@ -128,7 +140,7 @@ pre code {
     border-radius: 3px;
     display: block;
     padding: 10px;
-    margin-top: 10px;    
+    margin-top: 10px;
 }
 
 blockquote {
@@ -137,20 +149,20 @@ blockquote {
     padding: 10px;
     font-size: 14px;
     :first-child {
-	margin-top: 0;
+        margin-top: 0;
     }
     ul {
-	padding-left: 10px;
+        padding-left: 10px;
     }
 }
 // hide arrows from number inputs
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 /* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
+input[type="number"] {
+    -moz-appearance: textfield;
 }
